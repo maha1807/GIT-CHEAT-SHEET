@@ -1,4 +1,26 @@
 Git Cheat Sheet (Interview + Project Ready)
+
+Command	Purpose
+
+git init	Initialize a repository
+git clone	Copy a remote repository
+git status	Check repository status
+git add	    Stage changes
+git commit	Save staged changes
+git push	Upload commits to remote
+git pull	Download and merge changes
+git fetch	Download changes without merging
+git branch	List or create branches
+git checkout	Switch branches
+git merge	Merge branches
+git stash	Temporarily save work
+git log	View commit history
+git diff	View code changes
+git reset	Unstage or reset changes
+git rebase	Reapply commits onto another branch
+git rm	Remove a tracked file
+git mv	Rename or move a tracked file
+.gitignore	Ignore files from version control
 1. Configure Git (Do this once after installing Git)
 git config --global user.name "Your Name"
 
@@ -289,23 +311,3 @@ git commit -m "Implemented login page"
 
 git push origin feature-login
 23. Interview Commands You Should Know
-Command	Purpose
-git init	Initialize a repository
-git clone	Copy a remote repository
-git status	Check repository status
-git add	Stage changes
-git commit	Save staged changes
-git push	Upload commits to remote
-git pull	Download and merge changes
-git fetch	Download changes without merging
-git branch	List or create branches
-git checkout	Switch branches
-git merge	Merge branches
-git stash	Temporarily save work
-git log	View commit history
-git diff	View code changes
-git reset	Unstage or reset changes
-git rebase	Reapply commits onto another branch
-git rm	Remove a tracked file
-git mv	Rename or move a tracked file
-.gitignore	Ignore files from version control
