@@ -1,0 +1,311 @@
+Git Cheat Sheet (Interview + Project Ready)
+1. Configure Git (Do this once after installing Git)
+git config --global user.name "Your Name"
+
+👉 Sets your username for all commits.
+
+Example:
+
+git config --global user.name "Sanju"
+git config --global user.email "your@email.com"
+
+👉 Sets the email associated with your commits.
+
+Example:
+
+git config --global user.email "sanju@gmail.com"
+
+Check your configuration
+
+git config --list
+
+Shows all Git settings.
+
+2. Create or Download a Repository
+Create a new Git repository
+git init
+
+Meaning:
+
+Turns the current folder into a Git repository.
+
+Example
+
+Project/
+    index.html
+    style.css
+
+After
+
+git init
+
+Git starts tracking changes.
+
+Clone an existing repository
+git clone <repository-url>
+
+Example
+
+git clone https://github.com/user/project.git
+
+Downloads the entire repository.
+
+3. Check Repository Status
+git status
+
+Shows
+
+Modified files
+New files
+Deleted files
+Staged files
+
+Example
+
+modified: app.js
+
+Untracked:
+README.md
+4. Stage Files
+Stage one file
+git add fileName
+
+Example
+
+git add index.html
+
+Stages only index.html.
+
+Stage everything
+git add .
+
+Stages all modified files.
+
+5. Remove from Staging Area
+git reset fileName
+
+Example
+
+git reset index.html
+
+Removes it from staging.
+
+Your changes are NOT deleted.
+
+6. See Changes
+Before staging
+git diff
+
+Shows changes made but not staged.
+
+After staging
+git diff --staged
+
+Shows what will be committed.
+
+7. Commit Changes
+git commit -m "Added login page"
+
+Creates a snapshot of the staged changes.
+
+8. View Commit History
+git log
+
+Shows
+
+Commit ID
+Author
+Date
+Message
+
+Compact version
+
+git log --oneline
+
+Example
+
+a73f91 Added login
+
+87ab22 Fixed navbar
+
+123abc Initial commit
+9. Branching
+See branches
+git branch
+
+Example
+
+* main
+feature-login
+
+The * means current branch.
+
+Create a branch
+git branch feature-login
+
+Creates a branch.
+
+Switch branch
+git checkout feature-login
+
+Moves to that branch.
+
+Create and switch together
+
+git checkout -b feature-login
+10. Merge Branches
+
+Go to main
+
+git checkout main
+
+Merge
+
+git merge feature-login
+
+All changes from feature-login come into main.
+
+11. Remote Repository
+Add remote
+git remote add origin <repository-url>
+
+Example
+
+git remote add origin https://github.com/user/project.git
+
+See remote
+
+git remote -v
+
+Shows
+
+origin
+12. Push Code
+git push origin main
+
+Uploads commits to GitHub.
+
+First push
+
+git push -u origin main
+
+The -u sets the upstream branch so future pushes can simply use git push.
+
+13. Download Latest Changes
+git pull
+
+Downloads and merges changes from GitHub.
+
+14. Fetch Changes
+git fetch
+
+Downloads updates but does NOT merge them.
+
+15. Remove Files
+git rm file.txt
+
+Deletes the file and stages the deletion.
+
+16. Rename Files
+git mv oldName newName
+
+Renames a file and stages the rename.
+
+17. Git Stash
+
+Suppose you're halfway through coding but need to switch branches.
+
+Save work
+
+git stash
+
+View stashes
+
+git stash list
+
+Restore stash
+
+git stash pop
+
+Restores the latest stashed changes and removes them from the stash list.
+
+Delete stash
+
+git stash drop
+
+Deletes the latest stash.
+
+18. Reset
+Unstage
+git reset file.txt
+
+Keeps your changes but removes the file from staging.
+
+Hard reset
+
+git reset --hard HEAD
+
+Deletes ALL uncommitted changes.
+
+⚠️ Use carefully.
+
+19. Rebase
+git rebase main
+
+Moves your branch so it starts from the latest main, creating a cleaner commit history than a merge in many cases.
+
+20. Show Commit Details
+git show <commit-id>
+
+Displays the commit message, author, date, and exact code changes.
+
+21. Ignore Files
+
+Create
+
+.gitignore
+
+Example
+
+node_modules/
+.env
+*.log
+dist/
+
+Git will ignore these files and folders.
+
+22. Most Common Daily Workflow
+git clone <repo>
+
+git checkout -b feature-login
+
+# Make changes
+
+git status
+
+git add .
+
+git commit -m "Implemented login page"
+
+git push origin feature-login
+23. Interview Commands You Should Know
+Command	Purpose
+git init	Initialize a repository
+git clone	Copy a remote repository
+git status	Check repository status
+git add	Stage changes
+git commit	Save staged changes
+git push	Upload commits to remote
+git pull	Download and merge changes
+git fetch	Download changes without merging
+git branch	List or create branches
+git checkout	Switch branches
+git merge	Merge branches
+git stash	Temporarily save work
+git log	View commit history
+git diff	View code changes
+git reset	Unstage or reset changes
+git rebase	Reapply commits onto another branch
+git rm	Remove a tracked file
+git mv	Rename or move a tracked file
+.gitignore	Ignore files from version control
