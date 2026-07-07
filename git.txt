@@ -311,3 +311,163 @@ git commit -m "Implemented login page"
 
 git push origin feature-login
 23. Interview Commands You Should Know
+
+1. What is Git?
+
+Git is a Version Control System (VCS).
+
+It helps you:
+
+Track changes in your code
+Save different versions of your project
+Work with a team without overwriting each other's work
+Go back to older versions if something breaks
+
+Think of Git as the history manager for your project.
+
+Example
+
+Suppose you're building a calculator.
+
+Day 1
+
+Calculator
+
+Day 2
+
+Added Addition feature
+
+Day 3
+
+Added Subtraction
+
+Day 4
+
+Oops! Everything broke.
+
+With Git, you can go back to Day 3 instead of rewriting everything.
+
+Git works on your computer
+
+Everything below happens locally:
+
+git init
+git add .
+git commit -m "Added login page"
+
+No internet is required.
+
+2. What is GitHub?
+
+GitHub is a cloud platform where you store Git repositories online.
+
+GitHub lets you:
+
+Backup your code
+Share your code
+Collaborate with others
+Contribute to open-source projects
+Review code through Pull Requests
+
+Think of GitHub like Google Drive for Git repositories.
+
+Example:
+
+You build a project on your laptop.
+
+Without GitHub:
+
+Laptop
+
+If your laptop crashes, your code may be lost.
+
+With GitHub:
+
+Laptop
+     ↓
+ GitHub Cloud
+
+Your code is safely stored online.
+
+Common GitHub commands
+
+Upload your code
+
+git push origin main
+
+Download latest code
+
+git pull
+
+Clone someone else's project
+
+git clone <repository-url>
+3. What is GitLab?
+
+GitLab is another platform similar to GitHub.
+
+It also lets you:
+
+Host Git repositories
+Collaborate with teams
+Review code
+Manage issues
+Run CI/CD pipelines
+
+It provides many of the same core features as GitHub, with a strong focus on integrated DevOps workflows.
+
+Git vs GitHub vs GitLab
+Feature	Git	GitHub	GitLab
+What is it?	Version control tool	Cloud hosting platform	Cloud hosting platform
+Works offline?	✅ Yes	❌ No	❌ No
+Stores code online?	❌ No	✅ Yes	✅ Yes
+Tracks versions?	✅ Yes	Uses Git	Uses Git
+Collaboration	Local only	✅ Yes	✅ Yes
+Internet required?	❌ No	✅ Yes	✅ Yes (for remote hosting)
+How they work together
+Write Code
+     │
+     ▼
+Git (tracks changes on your computer)
+     │
+     ▼
+GitHub / GitLab (stores the repository online)
+     │
+     ▼
+Other developers can pull your code
+Real-world example
+
+Imagine you and your friend are building an online shopping website.
+
+Step 1: You create the project
+git init
+
+Git starts tracking the project.
+
+Step 2: Save your work
+git add .
+git commit -m "Created homepage"
+
+Git creates a snapshot.
+
+Step 3: Upload to GitHub
+git push origin main
+
+Now the project is available online.
+
+Step 4: Your teammate downloads it
+git clone https://...
+
+They now have the project on their computer.
+
+Step 5: They make changes
+git add .
+git commit -m "Added login"
+git push
+
+Their changes are uploaded.
+
+Step 6: You get the latest changes
+git pull
+
+Your local project is updated.
